@@ -12,6 +12,13 @@ $(document).ready(function () {
     var METRIC_TO_SHOW   = 'visits';
     var REFRESH_INTERVAL_SECONDS = 60;
 
+    LiveTabApi.getSettings(function (settings) {
+        NUM_LAST_MINUTES = settings.lastMinutes;
+        METRIC_TO_SHOW = settings.metric;
+        REFRESH_INTERVAL_SECONDS = settings.refreshInterval;
+        updateTitle();
+    });
+
     var originalTitle = $('title').text();
 
     function makeSeconds(seconds)
@@ -43,6 +50,4 @@ $(document).ready(function () {
         );
         ajaxRequest.send(false);
     }
-
-    updateTitle();
 });
