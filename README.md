@@ -8,7 +8,6 @@ See http://piwik.org/faq/plugins/#faq_21
 
 #### Todo
 
-* Add options for refresh interval, displayed metric, ...
 * Shorten the displayed value (1K, 1.6K, 4M 245K, ...)
 
 #### License
