@@ -26,6 +26,22 @@ $(document).ready(function () {
         return seconds * 1000;
     }
 
+    function shortenNumber (value) {
+        if (!value) {
+            return 0;
+        }
+
+        var suffix = ['', 'K', 'M', 'B', 'T'];
+
+        var index = 0;
+        while (value > 1000 && index < suffix.length - 1) {
+            index++;
+            value = (value / 1000).toFixed(2)
+        }
+
+        return (value) + suffix[index];
+    }
+
     function updateTitle()
     {
         var ajaxRequest = new ajaxHelper();
@@ -42,8 +58,9 @@ $(document).ready(function () {
                     return;
                 }
 
-                // TODO: shorten value 1K, 1.6K, 4M 245K, ...
-                $('title').text(response[0][METRIC_TO_SHOW] + ' - ' + originalTitle);
+                var value = shortenNumber(response[0][METRIC_TO_SHOW]);
+
+                $('title').text(value + ' - ' + originalTitle);
 
                 setTimeout(updateTitle, makeSeconds(REFRESH_INTERVAL_SECONDS));
             }
