@@ -1,5 +1,6 @@
 <?php
 $translations = array(
+  'LiveTab_SettingsMenu'           => 'LiveTab Settings',
   'LiveTab_Settings'               => 'LiveTab Settings',
   'LiveTab_RefreshInterval'        => 'Refresh interval',
   'LiveTab_MetricToDisplay'        => 'Metric to display',

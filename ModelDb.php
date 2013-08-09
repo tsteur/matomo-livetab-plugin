@@ -17,7 +17,7 @@ use Piwik\Db;
  *
  * @package Piwik_LiveTab
  */
-class Piwik_LiveTab_Model
+class Piwik_LiveTab_ModelDb
 {
     private $login;
     private static $tableName = 'user_livetab_settings';

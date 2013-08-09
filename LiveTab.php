@@ -51,11 +51,11 @@ class Piwik_LiveTab extends Plugin
 
     public function install()
     {
-        Piwik_LiveTab_Model::install();
+        Piwik_LiveTab_ModelOptions::install();
     }
 
     public function uninstall()
     {
-        Piwik_LiveTab_Model::uninstall();
+        Piwik_LiveTab_ModelOptions::uninstall();
     }
 }
