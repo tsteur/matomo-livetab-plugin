@@ -48,14 +48,4 @@ class Piwik_LiveTab extends Plugin
             true
         );
     }
-
-    public function install()
-    {
-        Piwik_LiveTab_ModelOptions::install();
-    }
-
-    public function uninstall()
-    {
-        Piwik_LiveTab_ModelOptions::uninstall();
-    }
 }

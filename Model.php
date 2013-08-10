@@ -17,7 +17,7 @@ use Piwik\Db;
  *
  * @package Piwik_LiveTab
  */
-class Piwik_LiveTab_ModelOptions
+class Piwik_LiveTab_Model
 {
     private $login;
 
@@ -49,10 +49,6 @@ class Piwik_LiveTab_ModelOptions
 
     private function getKey()
     {
-        return 'livetab_settings-' . $this->login;
+        return 'LiveTab-settings-' . $this->login;
     }
-
-    public static function install() {}
-
-    public static function uninstall(){}
 }

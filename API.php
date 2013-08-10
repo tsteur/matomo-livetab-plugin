@@ -45,7 +45,7 @@ class Piwik_LiveTab_API
 
         $login = Piwik::getCurrentUserLogin();
 
-        $model = new Piwik_LiveTab_ModelOptions($login);
+        $model = new Piwik_LiveTab_Model($login);
         $model->setSettings($metric, $lastMinutes, $refreshInterval);
     }
 
@@ -57,7 +57,7 @@ class Piwik_LiveTab_API
 
         $login = Piwik::getCurrentUserLogin();
 
-        $model    = new Piwik_LiveTab_ModelOptions($login);
+        $model    = new Piwik_LiveTab_Model($login);
         $settings = $model->getSettings();
 
         if (empty($settings)) {
