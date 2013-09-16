@@ -7,20 +7,23 @@
  * @category Piwik_Plugins
  * @package  Piwik_LiveTab
  */
+
+namespace Piwik\Plugins\LiveTab;
+
 use Piwik\Piwik;
 
 /**
  * @package Piwik_LiveTab
  */
-class Piwik_LiveTab_API
+class API
 {
     /**
-     * @var Piwik_LiveTab_API
+     * @var API
      */
     static private $instance = null;
 
     /**
-     * @return Piwik_LiveTab_API
+     * @return API
      */
     static public function getInstance()
     {
@@ -37,7 +40,7 @@ class Piwik_LiveTab_API
         Piwik::checkUserHasSomeViewAccess();
 
         if (!$this->isAllowedMetric($metric)) {
-            throw new Exception(Piwik_TranslateException('LiveTab_InvalidMetric'));
+            throw new \Exception(Piwik_TranslateException('LiveTab_InvalidMetric'));
         }
 
         $lastMinutes     = (int) $lastMinutes;
@@ -45,7 +48,7 @@ class Piwik_LiveTab_API
 
         $login = Piwik::getCurrentUserLogin();
 
-        $model = new Piwik_LiveTab_Model($login);
+        $model = new Model($login);
         $model->setSettings($metric, $lastMinutes, $refreshInterval);
     }
 
@@ -57,7 +60,7 @@ class Piwik_LiveTab_API
 
         $login = Piwik::getCurrentUserLogin();
 
-        $model    = new Piwik_LiveTab_Model($login);
+        $model    = new Model($login);
         $settings = $model->getSettings();
 
         if (empty($settings)) {
@@ -84,9 +87,9 @@ class Piwik_LiveTab_API
     private function getDefaultSettings()
     {
         return array(
-            'metric'          => Piwik_LiveTab::$defaultMetricToDisplay,
-            'lastMinutes'     => Piwik_LiveTab::$defaultLastMinutes,
-            'refreshInterval' => Piwik_LiveTab::$defaultRefreshInterval
+            'metric'          => LiveTab::$defaultMetricToDisplay,
+            'lastMinutes'     => LiveTab::$defaultLastMinutes,
+            'refreshInterval' => LiveTab::$defaultRefreshInterval
         );
     }
 

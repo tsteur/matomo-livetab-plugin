@@ -9,6 +9,8 @@
  * @package Piwik_LiveTab
  */
 
+namespace Piwik\Plugins\LiveTab;
+
 use Piwik\Piwik;
 use Piwik\Plugin;
 
@@ -16,7 +18,7 @@ use Piwik\Plugin;
  *
  * @package Piwik_LiveTab
  */
-class Piwik_LiveTab extends Plugin
+class LiveTab extends Plugin
 {
     public static $defaultRefreshInterval = 60;
     public static $defaultLastMinutes     = 30;

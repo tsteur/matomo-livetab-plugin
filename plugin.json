@@ -1,11 +1,18 @@
 {
     "name": "LiveTab",
     "description": "Keep an eye on the number of live visitors in the browser tab. It displays the number of visitors in the last 30 minutes in the browser tab.",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "keywords": ["live", "tab"],
     "homepage": "http://piwik.org",
     "license": "GPL-3.0+",
     "translationAvailable": true,
+    "donate": {
+        "paypal": "thomas.steur@googlemail.com"
+    },
+    "require": {
+        "piwik": ">=2.0.0",
+        "php": ">=5.3.0"
+    },
     "authors": [
         {
             "name": "Thomas Steur",

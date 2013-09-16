@@ -9,6 +9,8 @@
  * @package Piwik_LiveTab
  */
 
+namespace Piwik\Plugins\LiveTab;
+
 use Piwik\Piwik;
 use Piwik\Common;
 use Piwik\Db;
@@ -17,7 +19,7 @@ use Piwik\Db;
  *
  * @package Piwik_LiveTab
  */
-class Piwik_LiveTab_Model
+class Model
 {
     private $login;
 

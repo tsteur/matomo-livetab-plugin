@@ -9,6 +9,8 @@
  * @package Piwik_LiveTab
  */
 
+namespace Piwik\Plugins\LiveTab;
+
 use Piwik\Controller\Admin;
 use Piwik\Piwik;
 use Piwik\View;
@@ -17,7 +19,7 @@ use Piwik\View;
  *
  * @package Piwik_LiveTab
  */
-class Piwik_LiveTab_Controller extends Admin
+class Controller extends Admin
 {
     public function index()
     {
@@ -25,7 +27,7 @@ class Piwik_LiveTab_Controller extends Admin
 
         $view = new View('@LiveTab/index');
 
-        $api = new Piwik_LiveTab_API();
+        $api = new API();
         $settings = $api->getSettings();
 
         $view->metricToDisplay  = $settings['metric'];
