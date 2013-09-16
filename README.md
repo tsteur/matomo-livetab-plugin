@@ -4,7 +4,7 @@ This is a plugin for the Open Source Web Analytics platform [Piwik](http://piwik
 
 For better and faster readability the value will be shortened when greater than 1000. For instance to 3.12K or 3.43M.
 
-![Screenshot](https://raw.github.com/tsteur/piwik-livetab-plugin/master/screenshot.png)
+![Screenshot](https://raw.github.com/tsteur/piwik-livetab-plugin/master/screenshots/Browser_Tab.png)
 
 #### Installation
 
