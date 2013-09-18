@@ -5,7 +5,7 @@
     "keywords": ["live", "tab"],
     "homepage": "http://piwik.org",
     "license": "GPL-3.0+",
-    "translationAvailable": true,
+    "has_translation": true,
     "donate": {
         "paypal": "thomas.steur@googlemail.com"
     },
