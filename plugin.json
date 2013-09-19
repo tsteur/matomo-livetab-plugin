@@ -7,7 +7,8 @@
     "license": "GPL-3.0+",
     "has_translation": true,
     "donate": {
-        "paypal": "thomas.steur@googlemail.com"
+        "paypal": "thomas.steur@googlemail.com",
+        "flattr": "https://flattr.com/profile/steurth"
     },
     "require": {
         "piwik": ">=2.0.0",
