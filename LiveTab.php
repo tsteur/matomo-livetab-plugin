@@ -31,7 +31,7 @@ class LiveTab extends Plugin
     {
         return array(
             'AssetManager.getJavaScriptFiles' => 'getJsFiles',
-            'AdminMenu.addMenuEntry'          => 'addMenu',
+            'AdminMenu.addMenuEntries'        => 'addMenu',
         );
     }
 
