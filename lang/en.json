@@ -1,0 +1,8 @@
+{
+    "LiveTab": {
+        "RefreshInterval": "Refresh interval",
+        "MetricToDisplay": "Metric to display",
+        "LastMinutes": "Last minutes",
+        "InvalidMetric": "The given metric is not available.",
+    }
+}

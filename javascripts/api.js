@@ -7,10 +7,6 @@
 
 var LiveTabApi = LiveTabApi || (function () {
 
-    function setSettings()
-    {
-    }
-
     function getSettings(onSuccess)
     {
         var ajaxRequest = new ajaxHelper();
@@ -32,6 +28,5 @@ var LiveTabApi = LiveTabApi || (function () {
         ajaxRequest.send(false);
     }
 
-    return {setSettings: setSettings,
-            getSettings: getSettings};
+    return {getSettings: getSettings};
 })();

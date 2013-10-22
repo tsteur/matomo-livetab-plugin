@@ -20,10 +20,6 @@ use Piwik\Plugin;
  */
 class LiveTab extends Plugin
 {
-    public static $defaultRefreshInterval = 60;
-    public static $defaultLastMinutes     = 30;
-    public static $defaultMetricToDisplay = 'visits';
-
     /**
      * @see Piwik_Plugin::getListHooksRegistered
      */
@@ -31,7 +27,7 @@ class LiveTab extends Plugin
     {
         return array(
             'AssetManager.getJavaScriptFiles' => 'getJsFiles',
-            'Menu.Admin.addItems'             => 'addMenu',
+            'Plugin.addSettings'              => 'addSetting',
         );
     }
 
@@ -39,15 +35,10 @@ class LiveTab extends Plugin
     {
         $jsFiles[] = 'plugins/LiveTab/javascripts/api.js';
         $jsFiles[] = 'plugins/LiveTab/javascripts/liveTab.js';
-        $jsFiles[] = 'plugins/LiveTab/javascripts/liveTabAdmin.js';
     }
 
-    public function addMenu()
+    public function addSetting(&$result)
     {
-        Piwik_AddAdminMenu(
-            'LiveTab_SettingsMenu',
-            array('module' => 'LiveTab', 'action' => 'index'),
-            true
-        );
+        $result['LiveTab'] = 'Piwik\\Plugins\\LiveTab\\Settings';
     }
 }
