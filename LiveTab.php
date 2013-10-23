@@ -26,8 +26,7 @@ class LiveTab extends Plugin
     public function getListHooksRegistered()
     {
         return array(
-            'AssetManager.getJavaScriptFiles' => 'getJsFiles',
-            'Plugin.addSettings'              => 'addSetting',
+            'AssetManager.getJavaScriptFiles' => 'getJsFiles'
         );
     }
 
@@ -35,10 +34,5 @@ class LiveTab extends Plugin
     {
         $jsFiles[] = 'plugins/LiveTab/javascripts/api.js';
         $jsFiles[] = 'plugins/LiveTab/javascripts/liveTab.js';
-    }
-
-    public function addSetting(&$result)
-    {
-        $result['LiveTab'] = 'Piwik\\Plugins\\LiveTab\\Settings';
     }
 }
