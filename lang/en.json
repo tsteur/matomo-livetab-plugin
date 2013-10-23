@@ -3,6 +3,7 @@
         "RefreshInterval": "Refresh interval",
         "MetricToDisplay": "Metric to display",
         "LastMinutes": "Last minutes",
-        "InvalidMetric": "The given metric is not available."
+        "InvalidMetric": "The given metric is not available.",
+        "SettingsIntroduction": "Here you can define your custom LiveTab settings. If you change your settings, it does not effect any other users."
     }
 }

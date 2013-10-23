@@ -24,6 +24,7 @@ class Settings extends PluginSettings
 
     protected function init()
     {
+        $this->addIntroduction(Piwik::translate('LiveTab_SettingsIntroduction'));
         $this->addMetricSetting();
         $this->addLastMinuteSetting();
         $this->addRefreshIntervalSetting();
