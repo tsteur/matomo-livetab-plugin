@@ -13,6 +13,7 @@ namespace Piwik\Plugins\LiveTab;
 
 use Piwik\Piwik;
 use Piwik\Plugin\Settings as PluginSettings;
+use Piwik\Settings\UserSetting;
 
 /**
  * Settings
@@ -24,10 +25,10 @@ class Settings extends PluginSettings
 
     protected function init()
     {
-        $this->addIntroduction(Piwik::translate('LiveTab_SettingsIntroduction'));
-        $this->addMetricSetting();
-        $this->addLastMinuteSetting();
-        $this->addRefreshIntervalSetting();
+        $this->setIntroduction(Piwik::translate('LiveTab_SettingsIntroduction'));
+        $this->addSetting($this->getMetricSetting());
+        $this->addSetting($this->getLastMinuteSetting());
+        $this->addSetting($this->getRefreshIntervalSetting());
     }
 
     public function getAvailableMetrics()
@@ -42,59 +43,50 @@ class Settings extends PluginSettings
 
     public function getMetric()
     {
-        return $this->getPerUserSettingValue('metric');
+        return $this->getSettingValue($this->getMetricSetting());
     }
 
     public function getRefreshInterval()
     {
-        return $this->getPerUserSettingValue('lastMinutes');
+        return $this->getSettingValue($this->getLastMinuteSetting());
     }
 
     public function getLastMinutes()
     {
-        return $this->getPerUserSettingValue('refreshInterval');
+        return $this->getSettingValue($this->getRefreshIntervalSetting());
     }
 
-    /**
-     * @return string
-     */
-    private function addMetricSetting()
+    private function getMetricSetting()
     {
-        $title = Piwik::translate('LiveTab_MetricToDisplay');
+        $metric = new UserSetting('metric', Piwik::translate('LiveTab_MetricToDisplay'));
+        $metric->type  = static::TYPE_STRING;
+        $metric->field = static::FIELD_SINGLE_SELECT;
+        $metric->fieldOptions = $this->getAvailableMetrics();
+        $metric->description  = Piwik::translate('LiveTab_MetricDescription');
+        $metric->defaultValue = 'visits';
 
-        $this->addPerUserSetting('metric', $title, array(
-            'type'         => static::TYPE_STRING,
-            'field'        => static::FIELD_SINGLE_SELECT,
-            'fieldOptions' => $this->getAvailableMetrics(),
-            'description'  => 'Choose the metric that should be displayed in the browser tab',
-            'defaultValue' => 'visits'
-        ));
+        return $metric;
     }
 
-    /**
-     * @return string
-     */
-    private function addLastMinuteSetting()
+    private function getLastMinuteSetting()
     {
-        $title = Piwik::translate('LiveTab_LastMinutes');
+        $lastMinutes = new UserSetting('lastMinutes', Piwik::translate('LiveTab_LastMinutes'));
+        $lastMinutes->type = static::TYPE_INT;
+        $lastMinutes->fieldAttributes = array('size' => 3);
+        $lastMinutes->description     = Piwik::translate('LiveTab_LastMinutesDescription');
+        $lastMinutes->defaultValue    = 30;
 
-        $this->addPerUserSetting('lastMinutes', $title, array(
-            'type'            => static::TYPE_INT,
-            'fieldAttributes' => array('size' => 3),
-            'description'     => 'The counter will display the number of last N minutes',
-            'defaultValue'    => 30
-        ));
+        return $lastMinutes;
     }
 
-    private function addRefreshIntervalSetting()
+    private function getRefreshIntervalSetting()
     {
-        $title = Piwik::translate('LiveTab_RefreshInterval');
+        $refreshInterval = new UserSetting('refreshInterval', Piwik::translate('LiveTab_RefreshInterval'));
+        $refreshInterval->type = static::TYPE_INT;
+        $refreshInterval->fieldAttributes = array('size' => 3);
+        $refreshInterval->description     = Piwik::translate('LiveTab_RefreshIntervalDescription');
+        $refreshInterval->defaultValue    = 60;
 
-        $this->addPerUserSetting('refreshInterval', $title, array(
-            'type'            => static::TYPE_INT,
-            'fieldAttributes' => array('size' => 3),
-            'description'     => 'Defines how often the value should be updated (in seconds).',
-            'defaultValue'    => 60
-        ));
+        return $refreshInterval;
     }
 }
