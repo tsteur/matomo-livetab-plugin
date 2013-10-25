@@ -25,9 +25,9 @@ class API extends \Piwik\Plugin\API
         $settings = new Settings('LiveTab');
 
         return array(
-            'metric'          => $settings->getMetric(),
-            'lastMinutes'     => $settings->getLastMinutes(),
-            'refreshInterval' => $settings->getRefreshInterval()
+            'metric'          => $settings->metric->getValue(),
+            'lastMinutes'     => $settings->lastMinutes->getValue(),
+            'refreshInterval' => $settings->refreshInterval->getValue()
         );
     }
 

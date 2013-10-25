@@ -12,7 +12,6 @@
 namespace Piwik\Plugins\LiveTab;
 
 use Piwik\Piwik;
-use Piwik\Plugin\Settings as PluginSettings;
 use Piwik\Settings\UserSetting;
 
 /**
@@ -20,73 +19,68 @@ use Piwik\Settings\UserSetting;
  *
  * @package Login
  */
-class Settings extends PluginSettings
+class Settings extends \Piwik\Plugin\Settings
 {
+    /**
+     * @var UserSetting
+     */
+    public $metric;
+
+    /**
+     * @var UserSetting
+     */
+    public $lastMinutes;
+
+    /**
+     * @var UserSetting
+     */
+    public $refreshInterval;
 
     protected function init()
     {
         $this->setIntroduction(Piwik::translate('LiveTab_SettingsIntroduction'));
-        $this->addSetting($this->getMetricSetting());
-        $this->addSetting($this->getLastMinuteSetting());
-        $this->addSetting($this->getRefreshIntervalSetting());
+
+        $this->createMetricSetting();
+        $this->createLastMinuteSetting();
+        $this->createRefreshIntervalSetting();
     }
 
-    public function getAvailableMetrics()
+    private function createMetricSetting()
     {
-        return array(
+        $this->metric = new UserSetting('metric', Piwik::translate('LiveTab_MetricToDisplay'));
+        $this->metric->description  = Piwik::translate('LiveTab_MetricDescription');
+        $this->metric->defaultValue = 'visits';
+        $this->metric->type         = static::TYPE_STRING;
+        $this->metric->field        = static::FIELD_SINGLE_SELECT;
+        $this->metric->fieldOptions = array(
             'visits'          => Piwik::translate('General_ColumnNbVisits'),
             'actions'         => Piwik::translate('General_ColumnNbActions'),
             'visitsConverted' => Piwik::translate('Goals_GoalConversions'),
             'visitors'        => Piwik::translate('General_ColumnNbUniqVisitors')
         );
+
+        $this->addSetting($this->metric);
     }
 
-    public function getMetric()
+    private function createLastMinuteSetting()
     {
-        return $this->getSettingValue($this->getMetricSetting());
+        $this->lastMinutes = new UserSetting('lastMinutes', Piwik::translate('LiveTab_LastMinutes'));
+        $this->lastMinutes->type = static::TYPE_INT;
+        $this->lastMinutes->fieldAttributes = array('size' => 3);
+        $this->lastMinutes->description     = Piwik::translate('LiveTab_LastMinutesDescription');
+        $this->lastMinutes->defaultValue    = 30;
+
+        $this->addSetting($this->lastMinutes);
     }
 
-    public function getRefreshInterval()
+    private function createRefreshIntervalSetting()
     {
-        return $this->getSettingValue($this->getLastMinuteSetting());
-    }
+        $this->refreshInterval = new UserSetting('refreshInterval', Piwik::translate('LiveTab_RefreshInterval'));
+        $this->refreshInterval->type = static::TYPE_INT;
+        $this->refreshInterval->fieldAttributes = array('size' => 3);
+        $this->refreshInterval->description     = Piwik::translate('LiveTab_RefreshIntervalDescription');
+        $this->refreshInterval->defaultValue    = 60;
 
-    public function getLastMinutes()
-    {
-        return $this->getSettingValue($this->getRefreshIntervalSetting());
-    }
-
-    private function getMetricSetting()
-    {
-        $metric = new UserSetting('metric', Piwik::translate('LiveTab_MetricToDisplay'));
-        $metric->type  = static::TYPE_STRING;
-        $metric->field = static::FIELD_SINGLE_SELECT;
-        $metric->fieldOptions = $this->getAvailableMetrics();
-        $metric->description  = Piwik::translate('LiveTab_MetricDescription');
-        $metric->defaultValue = 'visits';
-
-        return $metric;
-    }
-
-    private function getLastMinuteSetting()
-    {
-        $lastMinutes = new UserSetting('lastMinutes', Piwik::translate('LiveTab_LastMinutes'));
-        $lastMinutes->type = static::TYPE_INT;
-        $lastMinutes->fieldAttributes = array('size' => 3);
-        $lastMinutes->description     = Piwik::translate('LiveTab_LastMinutesDescription');
-        $lastMinutes->defaultValue    = 30;
-
-        return $lastMinutes;
-    }
-
-    private function getRefreshIntervalSetting()
-    {
-        $refreshInterval = new UserSetting('refreshInterval', Piwik::translate('LiveTab_RefreshInterval'));
-        $refreshInterval->type = static::TYPE_INT;
-        $refreshInterval->fieldAttributes = array('size' => 3);
-        $refreshInterval->description     = Piwik::translate('LiveTab_RefreshIntervalDescription');
-        $refreshInterval->defaultValue    = 60;
-
-        return $refreshInterval;
+        $this->addSetting($this->refreshInterval);
     }
 }
