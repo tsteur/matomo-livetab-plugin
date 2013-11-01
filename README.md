@@ -15,9 +15,11 @@ See http://piwik.org/faq/plugins/#faq_21
 ## FAQ
 
 __Is it possible to configure the displayed metric?__
+
 Yes, you can choose between Visits, Actions, Converted Visits and Visitors.
 
 __Is it possible to configure the displayed metric per user?__
+
 Yes, this is also possible. Each user can configure the plugin differently.
 
 
