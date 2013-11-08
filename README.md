@@ -39,5 +39,5 @@ GPL v3 or later
 
 Please direct any feedback to: 
 
-* https://github.com/tsteur/piwik-livetab-plugin/issues
-* https://www.twitter.com/tsteur
+* [https://github.com/tsteur/piwik-livetab-plugin/issues](https://github.com/tsteur/piwik-livetab-plugin/issues)
+* [https://www.twitter.com/tsteur](https://www.twitter.com/tsteur)
