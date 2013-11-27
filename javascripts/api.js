@@ -15,6 +15,8 @@ var LiveTabApi = LiveTabApi || (function () {
             method: 'LiveTab.getSettings',
             format: 'JSON'
         }, 'get');
+        ajaxRequest.useCallbackInCaseOfError();
+        ajaxRequest.setErrorCallback(function () {});
         ajaxRequest.setCallback(
             function (response) {
                 if (!response || !response[0]) {
