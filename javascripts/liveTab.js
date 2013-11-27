@@ -52,7 +52,7 @@ $(document).ready(function () {
         }, 'get');
         ajaxRequest.setCallback(
             function (response) {
-                if (!response || !response[0]) {
+                 if (!response || !$.isArray(response) || !response[0]) {
 
                     return;
                 }
