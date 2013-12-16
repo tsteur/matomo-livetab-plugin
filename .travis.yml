@@ -20,8 +20,8 @@ install:
   - git checkout "$TEST_PIWIK_VERSION"
   - composer install
   - rm -rf plugins/LiveTab
-  - mv LiveTab plugins
   - cd ../
+  - mv ExamplePlugin piwik/plugins
 
 before_script:
   - cd piwik
