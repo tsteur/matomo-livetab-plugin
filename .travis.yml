@@ -12,7 +12,7 @@ script: ./travis.sh
 install:
   - TEST_PIWIK_VERSION=$(wget builds.piwik.org/LATEST -q -O -)
   - echo $TEST_PIWIK_VERSION
-  - TEST_PIWIK_VERSION=`echo $TEST_PIWIK_VERSION | tr -d ' '`
+  - TEST_PIWIK_VERSION=`echo $TEST_PIWIK_VERSION | tr -d ' ' | tr -d '\n'`
   - mkdir LiveTab
   - cp -R !(LiveTab) LiveTab
   - git clone https://github.com/piwik/piwik.git piwik
