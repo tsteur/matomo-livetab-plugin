@@ -10,14 +10,14 @@ env:
 script: ./travis.sh
 
 install:
-  - TEST_PIWIK_VERISON=$(wget builds.piwik.org/LATEST -q -O -)
+  - TEST_PIWIK_VERSION=$(wget builds.piwik.org/LATEST -q -O -)
   - echo $TEST_PIWIK_VERSION
-  - TEST_PIWIK_VERSION=`echo $TEST_PIWIK_VERISON | tr -d ' '`
+  - TEST_PIWIK_VERSION=`echo $TEST_PIWIK_VERSION | tr -d ' '`
   - mkdir LiveTab
   - cp -R !(LiveTab) LiveTab
   - git clone https://github.com/piwik/piwik.git piwik
   - cd piwik
-  - git checkout "$TEST_PIWIK_VERISON"
+  - git checkout "$TEST_PIWIK_VERSION"
   - composer install
   - rm -rf plugins/LiveTab
   - mv LiveTab plugins
