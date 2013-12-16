@@ -10,7 +10,7 @@ env:
 script: ./travis.sh
 
 install:
-  - TEST_PIWIK_VERSION=$(wget builds.piwik.org/LATEST -q -O -)
+  - TEST_PIWIK_VERSION=$(wget builds.piwik.org/LATEST_BETA -q -O -)
   - echo $TEST_PIWIK_VERSION
   - TEST_PIWIK_VERSION=`echo $TEST_PIWIK_VERSION | tr -d ' ' | tr -d '\n'`
   - mkdir LiveTab
