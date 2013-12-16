@@ -33,7 +33,7 @@ before_script:
   - ./tests/travis/setup_webserver.sh
   - wget https://raw.github.com/piwik/piwik-tests-plugins/master/activateplugin.php
   - php activateplugin.php LiveTab
-  - cd ../
+  - cd tests/PHPUnit
 
 after_script:
   - cat /var/log/nginx/error.log
