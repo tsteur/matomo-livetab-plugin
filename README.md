@@ -1,4 +1,6 @@
-# Piwik LiveTab Plugin
+# Piwik LiveTab Plugin 
+
+[![Build Status](https://travis-ci.org/tsteur/piwik-livetab-plugin.png?branch=master)](https://travis-ci.org/tsteur/piwik-livetab-plugin)
 
 ## Description
 
