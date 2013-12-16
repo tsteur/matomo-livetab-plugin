@@ -1,0 +1,41 @@
+language: php
+
+php:
+- 5.3
+
+env:
+  matrix:
+    - TEST_SUITE=CoreTests MYSQL_ADAPTER=PDO_MYSQL
+
+script: ./travis.sh
+
+install:
+  - TEST_PIWIK_VERISON=$(wget builds.piwik.org/LATEST -q -O -)
+  - echo $TEST_PIWIK_VERSION
+  - TEST_PIWIK_VERSION=`echo $TEST_PIWIK_VERISON | tr -d ' '`
+  - mkdir LiveTab
+  - cp -R !(LiveTab) LiveTab
+  - git clone https://github.com/piwik/piwik.git piwik
+  - cd piwik
+  - git checkout "$TEST_PIWIK_VERISON"
+  - composer install
+  - rm -rf plugins/LiveTab
+  - mv LiveTab plugins
+  - cd ../
+
+before_script:
+  - cd piwik
+  - uname -a
+  - date
+  - php -r "var_dump(gd_info());"
+  - mysql -e 'create database piwik_test;'
+  - ./tests/travis/prepare.sh
+  - ./tests/travis/setup_webserver.sh
+  - wget https://raw.github.com/piwik/piwik-tests-plugins/master/activateplugin.php
+  - php activateplugin.php LiveTab
+  - cd ../
+
+after_script:
+  - cat /var/log/nginx/error.log
+  - cat $TRAVIS_BUILD_DIR/piwik/tmp/php-fpm.log
+  - cat $TRAVIS_BUILD_DIR/piwik/tmp/logs/logger_message.htm
