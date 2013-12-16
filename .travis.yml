@@ -35,11 +35,11 @@ before_script:
   - ./tests/travis/setup_webserver.sh
   - wget https://raw.github.com/piwik/piwik-tests-plugins/master/activateplugin.php
   - php activateplugin.php LiveTab
+  - cat ./config/config.ini.php
   - cd tests/PHPUnit
   - mysql -e 'show databases;'
-  - cat ./config/config.ini.php
 
 after_script:
-  - cat ./config/config.ini.php
+  - cat ../../config/config.ini.php
   - mysql -e 'show databases;'
   - cat /var/log/nginx/error.log
