@@ -21,7 +21,7 @@ install:
   - composer install
   - rm -rf plugins/LiveTab
   - cd ../
-  - mv ExamplePlugin piwik/plugins
+  - mv LiveTab piwik/plugins
 
 before_script:
   - cd piwik
