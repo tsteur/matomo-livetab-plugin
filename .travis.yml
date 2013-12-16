@@ -30,13 +30,14 @@ before_script:
   - date
   - php -r "var_dump(gd_info());"
   - mysql -e 'create database piwik_test;'
+  - mysql -e 'show databases;'
   - ./tests/travis/prepare.sh
   - ./tests/travis/setup_webserver.sh
   - wget https://raw.github.com/piwik/piwik-tests-plugins/master/activateplugin.php
   - php activateplugin.php LiveTab
   - cd tests/PHPUnit
+  - mysql -e 'show databases;'
 
 after_script:
+  - mysql -e 'show databases;'
   - cat /var/log/nginx/error.log
-  - cat $TRAVIS_BUILD_DIR/piwik/tmp/php-fpm.log
-  - cat $TRAVIS_BUILD_DIR/piwik/tmp/logs/logger_message.htm
