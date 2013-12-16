@@ -28,18 +28,12 @@ before_script:
   - cd piwik
   - uname -a
   - date
-  - php -r "var_dump(gd_info());"
-  - mysql -e 'create database piwik_test;'
-  - mysql -e 'show databases;'
+  - mysql -e 'create database piwik_tests;'
   - ./tests/travis/prepare.sh
   - ./tests/travis/setup_webserver.sh
   - wget https://raw.github.com/piwik/piwik-tests-plugins/master/activateplugin.php
   - php activateplugin.php LiveTab
-  - cat ./config/config.ini.php
   - cd tests/PHPUnit
-  - mysql -e 'show databases;'
 
 after_script:
-  - cat ../../config/config.ini.php
-  - mysql -e 'show databases;'
   - cat /var/log/nginx/error.log
