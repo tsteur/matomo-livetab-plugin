@@ -37,7 +37,9 @@ before_script:
   - php activateplugin.php LiveTab
   - cd tests/PHPUnit
   - mysql -e 'show databases;'
+  - cat ./config/config.ini.php
 
 after_script:
+  - cat ./config/config.ini.php
   - mysql -e 'show databases;'
   - cat /var/log/nginx/error.log
