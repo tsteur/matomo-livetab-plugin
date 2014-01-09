@@ -1,7 +1,7 @@
 {
     "name": "LiveTab",
     "description": "Keep an eye on the number of live visitors in the browser tab. It displays the number of visitors in the last 30 minutes in the browser tab.",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "keywords": [
         "live",
         "tab"
