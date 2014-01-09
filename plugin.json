@@ -13,7 +13,7 @@
         "flattr": "https://flattr.com/profile/steurth"
     },
     "require": {
-        "piwik": "=>2.0.0"    
+        "piwik": ">=2.0.0"    
     },
     "authors": [
         {
