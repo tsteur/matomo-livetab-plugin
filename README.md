@@ -14,33 +14,6 @@ For better and faster readability the value will be shortened when greater than 
 
 See http://piwik.org/faq/plugins/#faq_21
 
-## FAQ
-
-__Is it possible to configure the displayed metric?__
-
-Yes, you can choose between Visits, Actions, Converted Visits and Visitors.
-
-__Is it possible to configure the displayed metric per user?__
-
-Yes, this is also possible. Each user can configure the plugin differently.
-
-__Is it possible to configure the website that should be used?__
-
-No, this is currently not possible. It will always display the metric of the current selected website.
-
-
-## Changelog
-
-__1.0.2__
-* Compatible with Piwik 2.0
-
-__1.0.0__
-* Initial release
-
-## License
-
-GPL v3 or later
-
 ## Support
 
 Please direct any feedback to: 
