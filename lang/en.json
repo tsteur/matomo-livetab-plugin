@@ -6,7 +6,6 @@
         "MetricDescription": "Choose the metric that should be displayed in the browser tab",
         "LastMinutes": "Last minutes",
         "LastMinutesDescription": "The counter will display the number of last N minutes",
-        "InvalidMetric": "The given metric is not available.",
-        "SettingsIntroduction": "Here you can define your custom LiveTab settings. If you change your settings, it does not effect any other users."
+        "InvalidMetric": "The given metric is not available."
     }
 }

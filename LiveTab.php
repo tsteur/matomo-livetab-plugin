@@ -11,7 +11,6 @@
 
 namespace Piwik\Plugins\LiveTab;
 
-use Piwik\Piwik;
 use Piwik\Plugin;
 
 /**
@@ -21,9 +20,9 @@ use Piwik\Plugin;
 class LiveTab extends Plugin
 {
     /**
-     * @see Piwik_Plugin::getListHooksRegistered
+     * @see Plugin::registerEvents
      */
-    public function getListHooksRegistered()
+    public function registerEvents()
     {
         return array(
             'AssetManager.getJavaScriptFiles' => 'getJsFiles'

@@ -13,10 +13,3 @@ For better and faster readability the value will be shortened when greater than 
 ## Installation
 
 See http://piwik.org/faq/plugins/#faq_21
-
-## Support
-
-Please direct any feedback to: 
-
-* [https://github.com/tsteur/piwik-livetab-plugin/issues](https://github.com/tsteur/piwik-livetab-plugin/issues)
-* [https://www.twitter.com/tsteur](https://www.twitter.com/tsteur)
