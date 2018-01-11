@@ -1,30 +1,26 @@
 {
     "name": "LiveTab",
     "description": "Keep an eye on the number of live visitors in the browser tab. It displays the number of visitors in the last 30 minutes in the browser tab.",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "keywords": [
         "live",
         "tab"
     ],
-    "homepage": "http://piwik.org",
+    "homepage": "https://matomo.org",
     "license": "GPL-3.0+",
-    "donate": {
-        "paypal": "thomas.steur@googlemail.com",
-        "flattr": "https://flattr.com/profile/steurth"
-    },
     "require": {
         "piwik": ">=3.0.0-b1,<4.0.0-b1"
     },
     "support": {
-        "issues": "https://github.com/tsteur/piwik-livetab-plugin/issues",
-        "wiki": "https://github.com/tsteur/piwik-livetab-plugin/wiki",
-        "source": "https://github.com/tsteur/piwik-livetab-plugin"
+        "issues": "https://github.com/tsteur/matomo-livetab-plugin/issues",
+        "wiki": "https://github.com/tsteur/matomo-livetab-plugin/wiki",
+        "source": "https://github.com/tsteur/matomo-livetab-plugin"
     },
     "authors": [
         {
             "name": "Thomas Steur",
-            "email": "thomas@piwik.org",
-            "homepage": "http://piwik.org"
+            "email": "",
+            "homepage": "https://matomo.org"
         }
     ]
 }
