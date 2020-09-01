@@ -1,5 +1,8 @@
 ## Changelog
 
+__4.0.0__
+* Compatible with Piwik 4.0
+
 __3.0.1__
 * Rename Piwik to Matomo
 

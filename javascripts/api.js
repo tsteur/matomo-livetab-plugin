@@ -19,12 +19,12 @@ var LiveTabApi = LiveTabApi || (function () {
         ajaxRequest.setErrorCallback(function () {});
         ajaxRequest.setCallback(
             function (response) {
-                if (!response || !$.isArray(response) || !response[0]) {
+                if (!response || typeof response != 'object') {
 
                     return;
                 }
 
-                onSuccess(response[0]);
+                onSuccess(response);
             }
         );
         ajaxRequest.send(false);

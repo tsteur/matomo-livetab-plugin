@@ -22,7 +22,7 @@ class API extends \Piwik\Plugin\API
     {
         Piwik::checkUserHasSomeViewAccess();
 
-        $settings = new UserSettings('LiveTab');
+        $settings = new UserSettings();
 
         return array(
             'metric'          => $settings->metric->getValue(),
