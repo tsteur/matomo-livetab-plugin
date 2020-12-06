@@ -6,6 +6,9 @@
  */
 
 $(document).ready(function () {
+    if (!piwik.idSite && !broadcast.getValueFromUrl('idSite')) {
+        return;
+    }
 
     var NUM_LAST_MINUTES = 30;
     var METRIC_TO_SHOW   = 'visits';
@@ -65,6 +68,6 @@ $(document).ready(function () {
                 setTimeout(updateTitle, makeSeconds(REFRESH_INTERVAL_SECONDS));
             }
         );
-        ajaxRequest.send(false);
+        ajaxRequest.send();
     }
 });

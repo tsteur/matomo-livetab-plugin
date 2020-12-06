@@ -28,7 +28,7 @@ var LiveTabApi = LiveTabApi || (function () {
                 onSuccess(response);
             }
         );
-        ajaxRequest.send(false);
+        ajaxRequest.send();
     }
 
     return {getSettings: getSettings};
