@@ -50,6 +50,7 @@ $(document).ready(function () {
             lastMinutes: NUM_LAST_MINUTES,
             format: 'JSON2'
         }, 'get');
+        ajaxRequest.withTokenInUrl();
         ajaxRequest.setCallback(
             function (response) {
                  if (!response || !$.isArray(response) || !response[0]) {

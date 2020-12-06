@@ -16,6 +16,7 @@ var LiveTabApi = LiveTabApi || (function () {
             format: 'JSON'
         }, 'get');
         ajaxRequest.useCallbackInCaseOfError();
+        ajaxRequest.withTokenInUrl();
         ajaxRequest.setErrorCallback(function () {});
         ajaxRequest.setCallback(
             function (response) {
