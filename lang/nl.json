@@ -1,0 +1,11 @@
+{
+    "LiveTab": {
+        "RefreshInterval": "Herlaad interval",
+        "RefreshIntervalDescription": "Geeft aan hoe vaak de warden geüpdatet moeten worden (in seconden).",
+        "MetricToDisplay": "Metric die moet worden weergegeven.",
+        "MetricDescription": "Kies de metric die moet worden weergegeven in de browser tab",
+        "LastMinutes": "Laatste minuten",
+        "LastMinutesDescription": "De teller zal het aantal weergeven van de laatste N minuten",
+        "InvalidMetric": "De opgegeven metric is niet beschikbaar."
+    }
+}

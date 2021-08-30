@@ -1,0 +1,11 @@
+{
+    "LiveTab": {
+        "RefreshInterval": "刷新间隔",
+        "RefreshIntervalDescription": "定义更新值的频率（秒）",
+        "MetricToDisplay": "要显示的度量",
+        "MetricDescription": "选择应在浏览器选项卡中显示的度量",
+        "LastMinutes": "最后几分钟",
+        "LastMinutesDescription": "计数器将显示最近N分钟的时间",
+        "InvalidMetric": "给定的度量值不可用。"
+    }
+}

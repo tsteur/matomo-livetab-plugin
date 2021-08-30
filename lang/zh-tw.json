@@ -1,0 +1,11 @@
+{
+    "LiveTab": {
+        "RefreshInterval": "重新整理間隔",
+        "RefreshIntervalDescription": "設定數值要多久更新一次（秒）",
+        "MetricToDisplay": "要顯示的數據",
+        "MetricDescription": "選擇要顯示在瀏覽器頁籤中的數據",
+        "LastMinutes": "過去幾分鐘",
+        "LastMinutesDescription": "計數器將顯示過去 N 分鐘的數值",
+        "InvalidMetric": "所選的數據不可用。"
+    }
+}

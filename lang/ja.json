@@ -1,0 +1,11 @@
+{
+    "LiveTab": {
+        "RefreshInterval": "更新間隔",
+        "RefreshIntervalDescription": "値を更新する頻度を定義します ( 秒単位 )",
+        "MetricToDisplay": "メトリックを表示",
+        "MetricDescription": "ブラウザタブに表示するメトリックを選択する",
+        "LastMinutes": "最新",
+        "LastMinutesDescription": "カウンタには最後の N 分の数が表示されます",
+        "InvalidMetric": "特定のメトリックは使用できません。"
+    }
+}

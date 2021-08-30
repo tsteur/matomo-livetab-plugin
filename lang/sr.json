@@ -1,0 +1,11 @@
+{
+    "LiveTab": {
+        "RefreshInterval": "Interval osvežavanja",
+        "RefreshIntervalDescription": "Definiše koliko često će se vrednost osvežavati (u sekundama)",
+        "MetricToDisplay": "Metrika koju treba prikazati",
+        "MetricDescription": "Izaberite metriku koja treba da bude prikazana u tabu brauzera",
+        "LastMinutes": "Poslednji minuti",
+        "LastMinutesDescription": "Brojač će prikazivati broj poslednjih N minuta",
+        "InvalidMetric": "Data metrika ne postoji."
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "LiveTab": {
+        "RefreshInterval": "Interval obnovy",
+        "RefreshIntervalDescription": "Definuje, jak často má být hodnota aktualizována (v sekundách)",
+        "MetricToDisplay": "Zobrazovaná metrika",
+        "MetricDescription": "Zvolte metriku, která se má zobrazit na záložce prohlížeče",
+        "LastMinutes": "Poslední minuty",
+        "LastMinutesDescription": "Počítadlo zobrazí počet v posledních N minutách",
+        "InvalidMetric": "Zvolená metrika není dostupná."
+    }
+}

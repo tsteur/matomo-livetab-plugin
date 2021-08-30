@@ -1,0 +1,11 @@
+{
+    "LiveTab": {
+        "RefreshInterval": "Oppdateringsintervall",
+        "RefreshIntervalDescription": "Definerer hvor ofte verdien skal oppdateres (i sekunder)",
+        "MetricToDisplay": "Tall som skal vises",
+        "MetricDescription": "Velg hvilket tall som skal vises i nettleservinduet",
+        "LastMinutes": "Siste minutter",
+        "LastMinutesDescription": "Telleren vil vise antallet fra de siste N minuttene",
+        "InvalidMetric": "Dette tallet er ikke tilgjengelig."
+    }
+}

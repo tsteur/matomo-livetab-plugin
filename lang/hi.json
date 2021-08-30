@@ -1,0 +1,11 @@
+{
+    "LiveTab": {
+        "RefreshInterval": "ताजा अंतराल",
+        "RefreshIntervalDescription": "(सेकंड में) मूल्य अद्यतन किया जाना चाहिए कितनी बार परिभाषित करता है",
+        "MetricToDisplay": "प्रदर्शित करने के लिए मीट्रिक",
+        "MetricDescription": "ब्राउज़र टैब में प्रदर्शित किया जाना चाहिए कि मीट्रिक चुनें",
+        "LastMinutes": "अंतिम मिनट",
+        "LastMinutesDescription": "काउंटर पिछले N मिनट की संख्या प्रदर्शित करेगा",
+        "InvalidMetric": "दी मीट्रिक उपलब्ध नहीं है।"
+    }
+}

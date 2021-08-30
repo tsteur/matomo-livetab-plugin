@@ -1,0 +1,11 @@
+{
+    "LiveTab": {
+        "RefreshInterval": "Interwał odświeżania",
+        "RefreshIntervalDescription": "Zdefiniuj jak często będą odświeżane wartości (w sekundach)",
+        "MetricToDisplay": "Wskaźnik do wyświetlenia",
+        "MetricDescription": "Wybierz, który wskaźnik zostanie wyświetlony w zakładce przeglądarki.",
+        "LastMinutes": "Ostatnich minut",
+        "LastMinutesDescription": "Licznik wyświetli liczby z ostatnich N minut",
+        "InvalidMetric": "Wybrany wskaźnik nie jest dostępny."
+    }
+}
