@@ -1,0 +1,11 @@
+{
+    "LiveTab": {
+        "RefreshInterval": "Actualizar intervalo",
+        "RefreshIntervalDescription": "Define con qué frecuencia se deberá actualizar el valor (en segundos)",
+        "MetricToDisplay": "Métrica a mostrar",
+        "MetricDescription": "Elija la métrica que debería mostrarse en la pestaña del navegador",
+        "LastMinutes": "Ultimos minutos",
+        "LastMinutesDescription": "El contador mostrará el número de los últimos N minutos",
+        "InvalidMetric": "El contador mostrará el número de los últimos N minutos"
+    }
+}

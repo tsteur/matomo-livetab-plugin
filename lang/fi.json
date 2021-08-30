@@ -1,0 +1,11 @@
+{
+    "LiveTab": {
+        "RefreshInterval": "Päivitysväli",
+        "RefreshIntervalDescription": "Määrittää, kuinka usein arvo päivitetään (sekunteina)",
+        "MetricToDisplay": "Näytettävät metriikat",
+        "MetricDescription": "Valitse metriikat jotka näkyvät selaimessa",
+        "LastMinutes": "Edelliset minuutit",
+        "LastMinutesDescription": "Laskuri näyttää numeron edelliseltä N:ltä minuutilta",
+        "InvalidMetric": "Annettu metriikka ei ole saatavilla."
+    }
+}

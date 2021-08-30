@@ -1,0 +1,11 @@
+{
+    "LiveTab": {
+        "RefreshInterval": "Aktualisierungsintervall",
+        "RefreshIntervalDescription": "Gibt an, wie oft der Wert aktualisiert werden soll (in Millisekunden)",
+        "MetricToDisplay": "Anzuzeigende Metrik",
+        "MetricDescription": "Wählen Sie die Metrik, welche im Browser-Tab angezeigt werden soll",
+        "LastMinutes": "Letzte Minuten",
+        "LastMinutesDescription": "Der Zähler zeigt die Ergebnisse der letzten N Minuten",
+        "InvalidMetric": "Die gewählte Metrik ist nicht verfügbar."
+    }
+}

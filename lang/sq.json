@@ -1,0 +1,11 @@
+{
+    "LiveTab": {
+        "RefreshInterval": "Interval rifreskimi",
+        "RefreshIntervalDescription": "Përcakton sa shpesh duhet përditësua vlera (në sekonda)",
+        "MetricToDisplay": "Vlerë për shfaqje",
+        "MetricDescription": "Zgjidhni vlerën që do të duhej shfaqur te skeda e shfletuesit",
+        "LastMinutes": "Minutat e fundit",
+        "LastMinutesDescription": "Numëratori do të shfaqë numrin e N minutave të fundit",
+        "InvalidMetric": "Vlera e dhënë s’është e passhme."
+    }
+}

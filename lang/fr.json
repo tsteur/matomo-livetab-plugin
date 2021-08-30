@@ -1,0 +1,11 @@
+{
+    "LiveTab": {
+        "RefreshInterval": "Intervalle de rafraîchissement",
+        "RefreshIntervalDescription": "Définit combien de fois la valeur devrait être mise à jour (en secondes)",
+        "MetricToDisplay": "Métrique à afficher",
+        "MetricDescription": "Choisissez la métrique qui doit être affichée dans l'onglet du navigateur",
+        "LastMinutes": "Dernières minutes",
+        "LastMinutesDescription": "Le compteur affichera le nombre des N dernières minutes",
+        "InvalidMetric": "La métrique donnée n'est pas disponible."
+    }
+}

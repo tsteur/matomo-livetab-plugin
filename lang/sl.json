@@ -1,0 +1,11 @@
+{
+    "LiveTab": {
+        "RefreshInterval": "Obdobje osveževanja",
+        "RefreshIntervalDescription": "Definira kako pogosto se naj osveži vrednost (v sekundah)",
+        "MetricToDisplay": "Metrika za prikaz",
+        "MetricDescription": "Izberi metriko, ki jo želite prikazati v zavihku brkljalnika",
+        "LastMinutes": "Zadnje minute",
+        "LastMinutesDescription": "Števec bo prikazal vrednost v zadnih N minutah",
+        "InvalidMetric": "Izbrana metrika ni na voljo."
+    }
+}

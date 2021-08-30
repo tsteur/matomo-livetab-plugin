@@ -1,0 +1,11 @@
+{
+    "LiveTab": {
+        "RefreshInterval": "Intervall för uppdatering",
+        "RefreshIntervalDescription": "Definierar hur ofta värdet skall uppdateras (i sekunder)",
+        "MetricToDisplay": "Variabel att visa",
+        "MetricDescription": "Välj värde som skall visas i webbläsarfliken.",
+        "LastMinutes": "Senaste minuterna",
+        "LastMinutesDescription": "Räknaren kommer att visa antalet för senaste N minuterna.",
+        "InvalidMetric": "Det angivna värdet finns inte tillgängligt."
+    }
+}

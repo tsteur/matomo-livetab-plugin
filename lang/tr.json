@@ -1,0 +1,11 @@
+{
+    "LiveTab": {
+        "RefreshInterval": "Yenilenme sıklığı",
+        "RefreshIntervalDescription": "Değerin yenilenme sıklığını belirtin (saniye cinsinden)",
+        "MetricToDisplay": "Görüntülenecek ölçüt",
+        "MetricDescription": "Web tarayıcı sekmesinde görüntülenecek ölçütü seçin",
+        "LastMinutes": "Görüntülenecek son dakika sayısı",
+        "LastMinutesDescription": "Sayacın son kaç dakikayı görüntüleyeceğini belirtin",
+        "InvalidMetric": "Belirtilen ölçüt kullanılamıyor."
+    }
+}
