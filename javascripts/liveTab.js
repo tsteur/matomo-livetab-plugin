@@ -51,7 +51,7 @@ $(document).ready(function () {
             module: 'API',
             method: 'Live.getCounters',
             lastMinutes: NUM_LAST_MINUTES,
-            format: 'JSON2'
+            format: 'JSON'
         }, 'get');
         ajaxRequest.withTokenInUrl();
         ajaxRequest.setCallback(
