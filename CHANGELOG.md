@@ -1,5 +1,8 @@
 ## Changelog
 
+__5.0.0__
+* Compatible with Matomo 5
+
 __4.0.1__
 * Compatible with Piwik 4.0
 
